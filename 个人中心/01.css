@@ -1,0 +1,102 @@
+li{
+    list-style: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.top{
+    width: 100%;
+    height: 250px;
+    position: relative;
+}
+.back{
+    width: 100%;
+    height: 250px;
+    z-index:-11;  
+    width: 100%;
+    filter: blur(2px);  
+}
+.top h2{
+    position: absolute;
+    top: 17%;
+    left: 36%;
+    color: #ffffff;
+}
+.bell{
+    position: absolute;
+    top: 19%;
+    right: 19%;
+    width: 5%;
+    height: 8%;
+}
+.set{
+    right: 5%;
+}
+.buddha{
+    width: 25%;
+    height: 39%;
+    position: absolute;
+    top: 37%;
+    left: 7%;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.2;
+    box-shadow: 0px 0px 21px 0px rgba(87, 87, 87, 0.3);
+}
+.buddha1{
+    width: 21%;
+    height: 35%;
+    border-radius: 50%;
+    position: absolute;
+    top: 39%;
+    left: 9%;
+}
+.sign{
+    position: absolute;
+    color: #ffffff;
+    top: 45%;
+    left: 33%;
+}
+.sign span{
+    line-height: 50px;
+    font-size: 13px;
+}
+.return{
+    position: absolute;
+    top: 55%;
+    right: 3%;
+}
+.popup{
+    position: absolute;
+    top: 33%;
+    right: 3%;
+    background-color: #ffffff;
+    border-radius:5px ;
+    display: none;
+}
+
+.popup ul li{
+    color: #acacac;
+    line-height: 40px;
+    font-size: 13px;
+    width: 70px;
+    height: 40px;
+    text-align: center;
+}
+
+.popup ul li:hover{
+    cursor: pointer;
+    background-color: #ff9326;
+}
+.popup::after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-width: 12px;
+    border-style: solid;
+    border-color: transparent transparent #ffffff transparent;
+    position: absolute;
+    top: -20%;
+    left: 58%;
+  }
