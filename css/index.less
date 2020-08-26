@@ -1,0 +1,220 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
+th, td { /* table elements 表格元素 */
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* 设置默认字体 */
+body,
+button, input, select, textarea { /* for ie */
+/*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+font-family: "微软雅黑",sans-serif, inherit; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+/* font-size: 0.12rem; */
+}
+
+h1 { font-size: 18px; }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+h4, h5, h6 { font-size: 100%; }
+
+address, cite, dfn, em, var { font-style: normal; } 
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } 
+small { font-size: 12px; } 
+
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+
+/* 重置文本格式元素 */
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+abbr[title], acronym[title] { 
+border-bottom: 1px dotted;
+cursor: help;
+}
+
+q:before, q:after { content: ''; }
+
+/* 重置表单元素 */
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+
+/* 重置表格元素 */
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+/* 重置 hr */
+hr {
+border: none;
+height: 1px;
+}
+
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html { overflow-y: scroll;}
+/*超出内容显示省略号*/
+.ellipsis{ max-width: 100%; white-space: nowrap; text-overflow:ellipsis; overflow:hidden; }
+/*清除浮动*/
+.clearfix { *zoom: 1; }
+.clearfix:before,
+.clearfix:after { display: table; line-height: 0; content: ""; }
+.clearfix:after { clear: both; }
+.clearfix:after {content:""; display: block; clear: both; }
+body{
+    min-width: 320px;
+    max-width: 750px;
+    width: 10rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f2ff;
+}
+@media screen and(min-width:750px){
+    html{
+        font-size: 75px !important;
+    }
+}
+header{
+    margin: 0 auto;
+    width: 10rem;
+	height: 1.706667rem;
+	background-color: #ff9326;
+	box-shadow: 0px 0px 10px 0px 
+        rgba(44, 35, 35, 0.16);
+    .banner{
+        display: flex;
+        justify-content: space-between;
+        padding: 0.893333rem 0.386667rem 0 0.186667rem;
+        align-items: center;
+        a{
+            width: 0.213333rem;
+	        height: 0.373333rem;
+            display: block;
+            background-color: #ffffff;
+        }
+        .txt{
+            font-family: PingFang-SC-Bold;
+            font-size: 0.48rem;
+            color: #ffffff;
+        }
+        .sign_in{
+            font-family: PingFang-SC-Regular;
+            font-size: 0.32rem;
+            color: #ffffff;
+            margin-top: 0.32rem;
+        }
+    }
+}
+.container{
+    margin: 0 auto;
+    width: 10rem;
+    background-color: lightseagreen;
+    display: flex;
+    justify-content: center;
+    background-color: #e97f7f;
+    padding-bottom: 0.586667rem;
+    .content{
+        margin-top: 0.4rem;
+        padding-bottom: 0.613333rem;
+        width: 9.466667rem;
+        // height: 9.466667rem;
+        background-color: #ffffff;
+        box-shadow: 0rem 0rem 0.106667rem 0rem 
+            rgba(171, 171, 171, 0.19);
+        border-radius: 0.266667rem;
+        display: flex;
+        flex-flow: column nowrap;
+        // justify-content: center;
+        align-items: center;
+
+        .pic{
+            // margin: 0 auto;
+            width: 1.6rem;
+            height: 1.6rem;
+            background: limegreen;
+            margin-top: 1.346667rem;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        h2{
+            font-size: 0.373333rem;
+            letter-spacing: 0px;
+            color: #111;
+            font-weight: bold;
+            // text-align: center;
+            margin-top: 0.266667rem;
+        }
+        .form{
+            width: 6.666667rem;
+            height: 8rem;
+            background: lightpink;
+            margin-top: 1.026667rem;
+        }
+        .third_party{
+            width: 8.546667rem;
+            margin-top: 2.213333rem;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            // align-items: center;
+            .txt{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                .line{
+                    width: 2.666667rem;
+                    height: 0.026667rem;
+                    background-color: #dadada;
+                }
+                h4{
+                    flex: 1;    
+                    text-align: center;
+                    font-size: 0.32rem;
+                }
+
+            }
+            .icon{
+                width: 4.213333rem;
+                height: 1.186667rem;
+                margin-top: 0.533333rem;
+                display: flex;
+                justify-content: space-between;
+                .wx,.pay{
+                    // width: 1.04rem;
+                    // height: 100%;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    .imgs{
+                        width: 0.88rem;
+                        height: 0.88rem;
+                        background: coral;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                    }
+                    span{
+                        display: block;
+                        font-size: 0.266667rem;
+                    }
+                }
+            }
+        }
+    }
+  
+}
