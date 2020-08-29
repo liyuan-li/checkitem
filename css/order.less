@@ -47,9 +47,15 @@ body {
                     font-size: 0.32rem;
                     li {
                         height: 100%;
+                        margin-bottom: 4px;
                         line-height: 1.333333rem;
+                        a {
+                            display: block;
+                            width: 1.333333rem;
+                            text-align: center;
+                        }
                     }
-                    li.active {
+                    li .active {
                         border-bottom: 4px solid #ff9326;
                         box-sizing: border-box;
                     }
@@ -61,6 +67,37 @@ body {
         position: absolute;
         top: 4.333333rem;
         width: 10rem;
+        overflow: hidden;
+        .move {
+            width: 1000%;
+            display: flex;
+            justify-content: flex-start;
+            /* .reveal {
+                // display: block;
+            } */
+        }
+        .content_box {
+            // display: none;
+            width: 9.466667rem;
+            padding: 0 0.266667rem;
+            height: 100%;
+        }
+        .obligation {
+            .main {
+                .obligation_bg {
+                    width: 100%;
+                    margin-top: 2.506667rem;
+                    text-align: center;
+                    .none {
+                        font-size: 0.373333rem;
+                    }
+                    .like {
+                        font-size: 0.32rem;
+                        color: #666;
+                    }
+                }
+            }
+        }
         .record {
             position: absolute;
             top: 0.106667rem;

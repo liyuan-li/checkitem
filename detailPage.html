@@ -11,7 +11,7 @@
 </head>
 <body>
     <header class="head">
-        <div class="basic">
+        <!-- <div class="basic">
             <ul class="circle">
                 <li></li>
                 <li></li>
@@ -26,26 +26,26 @@
                 <li class="bai">100 %</li>
                 <li class="battery"><img src="./images/BatteryIcon.png" alt=""></li>
             </ul>
-        </div>
+        </div> -->
         <div class="order">
             <ul>
                 <li><a href="javascript:;"><img src="./images/fanhui.png" alt=""></a></li>
                 <li><h1>商品详情</h1></li>
-                <li><a href="javascript:;"><img src="./images/fenxiang.png" alt=""></a></li>
+                <li id="share"><a href="javascript:;"><img src="./images/fenxiang.png" alt=""></a></li>
             </ul>
         </div>
     </header>
-    <section class="content">
-        <div class="banner_bg">
+    <section class="content" id="content">
+        <div class="banner_bg" id="banner_bg">
             <div class="photo_bg">
-                <ul class="photo">
-                    <li><img src="./images/banner.png" alt=""></li>
+                <ul class="photo" id="photo_img">
+                    <li class="reveal"><img src="./images/banner.png" alt=""></li>
                     <li><img src="./images/banner01.jpg" alt=""></li>
                     <li><img src="./images/banner02.jpg" alt=""></li>
                     <li><img src="./images/banner03.jpg" alt=""></li>
                 </ul>
             </div>
-            <ul class="indexes">
+            <ul class="indexes" id="indexes">
                 <li class="active"></li>
                 <li></li>
                 <li></li>
@@ -54,7 +54,20 @@
         </div>
         <div class="main">
             <div class="top">
-                <p class="price"><span>¥ </span>98.9</p>
+                <div class="timing">
+                    <div class="price_box">
+                        <span class="price"><span>¥ </span>98.9</span>
+                        <span class="outmoded"><i>¥</i> 99.9</span>
+                    </div>
+                    <div class="rush">
+                        <span class="end">距抢购结束还剩：</span>
+                        <span class="timer" id="hour">00</span>
+                        :
+                        <span class="timer" id="minutes">00</span>
+                        :
+                        <span class="timer" id="seconds">00</span>
+                    </div>
+                </div>
                 <div class="title">
                     <span class="title_words">依泉润唇膏套装 郭得后 家锐他化之土皇 听作人，壬场 保湿滋润补水物色防干裂 唇部护理唇膜淡化唇纹</span>
                     <span class="ticket">领券 <i><img src="./images/jiantou.png" alt=""></i></span>
@@ -158,7 +171,7 @@
                 <i><img src="./images/kefu.png" alt=""></i>
                 <span>客服</span>
             </div>
-            <div class="service change">
+            <div class="service change" id="collect">
                 <i><img src="./images/xing01.png" alt=""></i>
                 <span>收藏</span>
             </div>
@@ -168,5 +181,73 @@
             <button class="buy" type="button">立即购买</button>
         </div>
     </footer>
+    <div class="shopping_box" id="shopping_box">
+        <div class="shopping_trolley">
+            <div class="close"><a href="javascript:;"><img src="./images/close.png" alt=""></a></div>
+            <div class="headline">
+                <div class="mg_photo"><img src="./images/shop01.png" alt=""></div>
+                <div class="word_title_bg">
+                    <p>依泉润唇膏套装 保湿滋润补水物色防干裂 唇部护理唇膜淡化唇纹</p>
+                    <p class="price" id="price_eight"><span>¥ </span><i>98.90</i></p>
+                    <p class="inventory">库存1908件</p>
+                </div>
+            </div>
+            <div class="product">
+                <h3>产品规格</h3>
+                <a class="eight" id="sum" href="javascript:;">8g/ml</a>
+                <a id="half" href="javascript:;">4g/ml</a>
+            </div>
+            <div class="buy_nums">
+                <h3>购买数量</h3>
+                <div class="numbers">
+                    <a id="subtract" href="javascript:;">-</a>
+                    <span id="one">1</span>
+                    <a id="plus" href="javascript:;">+</a>
+                </div>
+            </div>
+            <div class="confirm">
+                <button type="button">确定</button>
+            </div>
+        </div>
+    </div>
+    <div class="shopping_box share" id="share_bg">
+        <div class="interface">
+            <div class="interface_bg">
+                <h5>分享到</h5>
+                <ul class="links_bg">
+                    <li>
+                        <a href="javascript:;"><img src="./images/WeChat.png" alt=""></a>
+                        <span>微信好友</span>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="./images/Friends.png" alt=""></a>
+                        <span>朋友圈</span>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="./images/QQ.png" alt=""></a>
+                        <span>QQ好友</span>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="./images/space.png" alt=""></a>
+                        <span>QQ空间</span>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="./images/microblog.png" alt=""></a>
+                        <span>新浪微博</span>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="./images/link.png" alt=""></a>
+                        <span>复制链接</span>
+                    </li>
+                </ul>
+                <p class="cancel">取消</p>
+            </div>
+        </div>
+    </div>
+    <div class="copy">
+        <span class="success">复制成功</span>
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/detailPage.js"></script>
 </body>
 </html>
