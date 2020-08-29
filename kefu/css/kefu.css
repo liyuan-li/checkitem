@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  font-family: '微软雅黑';
+  background: #f9f9f9;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  border: none;
+}
+
+button, input {
+  border: 0;
+  outline: 0;
+}
+
+header {
+  height: 50px;
+  background: #ff9326;
+}
+
+header img {
+  height: 14px;
+  padding: 18px 0 0 20px;
+}
+
+header div {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  margin: -23px 0 0 0;
+}
+
+.content li {
+  margin-top: 10px;
+  padding: 0 10px;
+  display: block;
+  clear: both;
+}
+
+.content li:nth-child(even) {
+  background: #fff;
+  height: 90px;
+  border-radius: 5px;
+}
+
+.content li img {
+  width: 80px;
+}
+
+.content li span {
+  padding: 10px;
+  float: right;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.content li img.imgleft {
+  float: left;
+}
+
+.content li img.imgright {
+  float: right;
+}
+
+.content li span.spanleft {
+  float: left;
+  max-width: 200px;
+  background: #f9f9f9;
+}
+
+.content li span.spanright {
+  background: #ffeeb3;
+  max-width: 200px;
+  word-break: break-all;
+}
+
+article {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.article {
+  width: 94.5%;
+  /* height: 531.5px; */
+  margin: 10px auto;
+  border-radius: 5px;
+  background: #fff;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer .footer {
+  background: #fff;
+  /* height: 129px; */
+  height: 49px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .footer img {
+  width: 26px;
+}
+
+footer .footer input {
+  width: 255px;
+  height: 30px;
+  margin: 0 14px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background: #f9f9f9;
+}
+
+footer .footer button {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  border-radius: 50%;
+  background: #ff9326;
+}
+
+footer .footer #bt {
+  width: 80px;
+  border-radius: 5px;
+}
+
+.footerT {
+  margin: 15px 0;
+  height: 50px;
+}
+
+.footerTt {
+  margin: 0;
+  height: 0;
+}
+
+footer .footerT img {
+  width: 30px;
+  border: 2px solid #dadada;
+  margin: 0 15.5px;
+  padding: 10px;
+}

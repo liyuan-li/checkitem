@@ -1,41 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <link rel="shortcut icon" href="image/x-icon" type="" />
-    <link rel="stylesheet" href="css" />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        font-size: 14px;
-        font-family: '微软雅黑';
-      }
-      ul,
-      ol {
-        list-style: none;
-      }
-      a {
-        text-decoration: none;
-        color: #000;
-      }
-      img {
-        border: none;
-      }
-      @media screen and (max-width: 900px) {
-      }
-    </style>
-  </head>
-  <body>
-    <noscript>
-      <p>本页面需要浏览器支持（启用）JavaScript</p>
-    </noscript>
 
-    <script src="js/"></script>
-    <script></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>客服</title>
+  <link rel="stylesheet" href="./css/kefu.css" />
+
+</head>
+
+<body>
+  <header>
+    <span onclick="myFunc('')"><img src="./images/fanhui.png" alt=""></span>
+    <div>客服</div>
+  </header>
+
+  <div id="container">
+    <article>
+      <div class="article">
+        <ul class="content">
+          <li v-for="(item, index) in messageList">
+            <img :src="'./images/'+(item.myself?'yonghu.png':'kefu.png')" :class="'img'+(item.myself?'right':'left')">
+            <span :class="'span'+(item.myself?'right':'left')">{{item.message}}</span>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <footer>
+      <div class="footer">
+        <img src="./images/yuyin.png" alt="">
+        <input id="text" type="text" v-model.trim="inputValue" @keyup.enter='chat' placeholder="说点什么吧...">
+        <button id="btn">+</button>
+        <button id="bt" style="display: none;">发送</button>
+      </div>
+      <div id="footerT" class="footerTt">
+        <img src="./images/xiangji.png" alt="">
+        <img src="./images/pic.png" alt="">
+        <img src="./images/shipin.png" alt="">
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    //用户和客服没名字  跳转还没写
+
+
+    //引用图灵聊天机器人
+    let app = new Vue({
+      el: '#container',
+      data: {
+        //输入的内容,事先约定好的
+        inputValue: '',
+        //聊天的数组内容
+        messageList: []
+      },
+      methods: {
+        //点击回车时候发送信息
+        chat() {
+          this.messageList.push({
+            message: this.inputValue,
+            //这个是判断当前是否是自己输入的内容,自己的是true,机器人的是false
+            myself: true
+          })
+          // console.log(1);
+          // console.log(message)
+          // console.log(this.inputValue);
+          //每次发送信息之后机器人就要回复,所以添加完之后直接调用机器人的接口
+          $.ajax({
+            url: 'http://www.tuling123.com/openapi/api',
+            type: 'post',
+            data: {
+              key: 'e5e78db64c3744fda06533e6729737da',
+              info: this.inputValue
+            },
+            success: (data) => {
+              // console.log(data);
+              this.messageList.push({
+                message: data.text,
+                myself: false
+              })
+            }
+          })
+        }
+      },
+    })
+
+    //button焦点
+    var btn = document.getElementById('btn')
+    var footerT = document.getElementById('footerT')
+
+    btn.onfocus = function () {
+      footerT.classList.add("footerT");
+      footerT.classList.remove("footerTt");
+      btn.innerHTML = '×'
+    }
+    btn.onblur = function () {
+      footerT.classList.remove("footerT");
+      footerT.classList.add("footerTt");
+      btn.innerHTML = '+'
+    }
+
+    //input 焦点
+    var bt = document.getElementById('bt')
+    var input = document.getElementById('text')
+
+    input.onfocus = function () {
+      input.style.width = 200 + 'px'
+      btn.style.display = 'none';
+      bt.style.display = 'block';
+      btn.innerHTML = '发送'
+    };
+    input.onblur = function () {
+      input.style.width = 255 + 'px'
+      btn.style.display = 'block';
+      bt.style.display = 'none';
+      btn.innerHTML = '+'
+    };
+
+    //跳转
+    function myFunc(http) {
+      window.location.href = http
+    }
+  </script>
+</body>
+
 </html>
