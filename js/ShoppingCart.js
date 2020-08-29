@@ -12,9 +12,6 @@ var zongji = document.getElementById('zongji')
 
 var a = 1
 
-//select没效果 不能反向全选 点击全选只有选择效果  删除不会只执行一次
-//总计  结算  订单  付款  退款  更新GitHub
-
 window.onload = function () {
   var oUl = document.getElementById('cenRb')
   var aLi = oUl.getElementsByTagName('span')
@@ -128,4 +125,13 @@ document.getElementById('check').onclick = function () {
 //跳转
 function myFunc(http) {
   window.location.href = http
+}
+// onclick="myFunc('')"
+
+button.onclick = function () {
+  if (user.checked == true) {
+    myFunc('../tyj/ment.html')
+  } else {
+    Dialog.init('请选择商品', { maskClick: 1 })
+  }
 }

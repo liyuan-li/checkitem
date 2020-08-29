@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  font-family: '微软雅黑';
+  background: #f9f9f9;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #c1c1c1;
+}
+
+img {
+  border: none;
+}
+
+button, input, select {
+  border: 0;
+  outline: 0;
+}
+
+header {
+  height: 80px;
+  line-height: 80px;
+  background: #fff;
+  text-align: center;
+}
+
+header img {
+  height: 14px;
+}
+
+header div {
+  width: 80%;
+  font-size: 21px;
+  display: inline-block;
+}
+
+article .artTop {
+  width: 94.5%;
+  height: 70px;
+  margin: 5px auto;
+  background: #fcc68f;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.article {
+  height: 139.5px;
+  background: #fff;
+  width: 94.5%;
+  margin: 5px auto;
+  border-radius: 10px;
+}
+
+article .artTop p {
+  font-weight: bolder;
+  padding: 17px 0 0 11%;
+}
+
+article .artTop div img {
+  position: absolute;
+  top: 113px;
+  left: 5%;
+  width: 17px;
+}
+
+article .artTop div span {
+  margin-left: 11%;
+  font-size: 12px;
+}
+
+article .cenOne, article .cenTwo {
+  width: 94.5%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+article .cenTwo {
+  background: #e9e9e9;
+  height: 1px;
+}
+
+article .cenOne span:nth-child(2), article .cenOne span:nth-child(3) {
+  color: #999;
+  margin-left: 11px;
+  font-size: 12px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+footer button {
+  width: 150px;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: #fff;
+}
+
+footer button:nth-child(1) {
+  margin-right: 25px;
+  background: #FF9326;
+  color: #fff;
+}

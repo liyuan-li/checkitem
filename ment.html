@@ -5,54 +5,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>订单确认</title>
-  <link rel="stylesheet" href="../css/ment.css" />
-  <style>
-    .contact {
-      width: 60px;
-      height: 29px;
-      background: #f1f1f1;
-      position: absolute;
-      right: 3%;
-      top: 8%;
-      color: #999;
-      font-size: 12px;
-      text-align: center;
-      line-height: 29px;
-    }
-
-    .contact::after {
-      content: "";
-      border-width: 14px;
-      border-style: solid;
-      border-color: transparent transparent #f1f1f1 transparent;
-      position: absolute;
-      top: -71%;
-      left: 45%;
-    }
-  </style>
+  <link rel="stylesheet" href="../tyj/css/ment.css" />
+  <link rel="stylesheet" href="../tyj/css/dialog.css">
+  <!-- 网页端会崩  支付宝和微信能同时选中  地址没写 -->
 </head>
+<script src="../tyj/js/mDialogMin.js"></script>
 <header>
   <header>
-    <span onclick="myFunc('../index.html')"><img src="../images/fanhui.png" alt=""></span>
-    <div>客服</div>
+    <span onclick="myFunc('../tyj/ShoppingCart.html')"><img src="../tyj/images/fanhui-hui.png" alt=""></span>
+    <div>订单确认</div>
     <button id="guanli">···</button>
   </header>
 </header>
 
-<div class="contact">联系客服</div>
+<div id="contact" style="display: none;" onclick="myFunc('../tyj/customerservice.html')">联系客服</div>
 
 <article>
   <div class="article">
     <div class="artTop">
       <p>郭女士<span>178****2315</span></p>
       <div>
-        <img src="../images/daochu.png" alt="">
+        <img src="../tyj/images/daochu.png" alt="">
         <span>浙江省温州市鹿城工业区泰力路37号B幢203室</span>
       </div>
-      <img src="../images/fanhui-right.png" alt="" style="top: 125px;">
+      <img src="../tyj/images/fanhui-right.png" alt="" style="top: 125px;">
     </div>
     <div class="shopping" id="shopping">
-      <img src="../images/sp1.png" alt="">
+      <img src="../tyj/images/sp1.png" alt="">
       <div class="cenR">
         <p>依泉润唇膏套装 保湿滋润补水无色防干裂 唇部护理唇膜淡化唇纹护唇膏... </p>
         <select>
@@ -71,7 +50,7 @@
     <div class="cenOne">
       <span>配送方式</span>
       <span>普通快递</span>
-      <img src="../images/fanhui-right.png" alt="">
+      <img src="../tyj/images/fanhui-right.png" alt="">
     </div>
     <div class="cenOne">
       <span>运费</span>
@@ -80,7 +59,7 @@
     <div class="cenOne">
       <span>优惠券</span>
       <span style="margin-left: 28px;">无可用</span>
-      <img src="../images/fanhui-right.png" alt="">
+      <img src="../tyj/images/fanhui-right.png" alt="">
     </div>
     <div class="cenOne">
       <span>发货时间</span>
@@ -103,14 +82,14 @@
     <div class="zhifu">
       <div>支付方式</div>
       <div style="display: flex;">
-        <img src="../images/zhifubao.png" alt="">
+        <img src="../tyj/images/zhifubao.png" alt="">
         <span>支付宝</span>
         <span>推荐</span>
         <input type="checkbox" id="check" style="display: none;">
         <label for="check"></label>
       </div>
       <div>
-        <img src="../images/weixin.png" alt="">
+        <img src="../tyj/images/weixin.png" alt="">
         <span style="margin-left: -5px;">微信支付</span>
         <input type="checkbox" id="check2" style="display: none;">
         <label for="check2"></label>
@@ -126,21 +105,11 @@
   <div class="xuanze">
     <span style="position: absolute;right: 58%;">共1件</span>
     <div class="jisuan">合计:<span id="span">¥98.9元</span></div>
-    <button onclick="myFunc('./html/ment.html')">确认付款</button>
+    <button id="payment">确认付款</button>
   </div>
 </footer>
 
-<script>
-  var guanli = document.getElementById('guanli')
-  guanli.onclick = function () {
-
-  }
-  //跳转
-  function myFunc(http) {
-    window.location.href = http
-  }
-
-</script>
+<script src="../tyj/js/ment.js"></script>
 </body>
 
 </html>

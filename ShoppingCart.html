@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>购物车</title>
+  <link rel="stylesheet" href="../tyj/css/ShoppingCart.css" />
+  <link rel="stylesheet" href="../tyj/css/dialog.css">
+  <!-- select没效果 不能反向全选 点击全选只有选择效果  删除不会只执行一次 -->
+</head>
+<script src="../tyj/js/mDialogMin.js"></script>
+<header>
+  <div class="header">
+    <div>购物车</div>
+    <button id="guanli">管理</button>
+  </div>
+</header>
+
+<article>
+  <div class="cen">
+    <div class="zongji" id="zongji">共1件商品</div>
+    <div class="shopping" id="shopping">
+      <input type="checkbox" class="check" name="user" id="user" style="display: none;" />
+      <label for="user"></label>
+      <img src="./images/sp1.png" alt="">
+      <div class="cenR">
+        <p>依泉润唇膏套装 保湿滋润补水无色防干裂 唇部护理唇膜淡化唇纹护唇膏... </p>
+        <select>
+          <option value="8g/ml">8g/ml</option>
+          <option value="18g/ml">18g/ml</option>
+          <option value="188g/ml">188g/ml</option>
+          <option value="1888g/ml">1888g/ml</option>
+        </select>
+        <div id="cenRb" class="cenRb">
+          <span>
+            <em id="zhi">98.9元</em>
+            <div class="cenRbr">
+              <input class="min" type="button" value="-" id="mdialog1" />
+              <strong>1</strong>
+              <input class="add" type="button" value="+" id="mdialog2" />
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="xuanze">
+    <input type="checkbox" id="check" style="display: none;">
+    <label for="check"></label>全选
+    <div class="jisuan" id="jisuan">合计:<span id="span">0.0元</span></div>
+    <button id="button">结算</button>
+    <div class="yiru" id="yiru">
+      <img src="../tyj/images/shoucangjia.png" alt="">
+      移入收藏夹
+    </div>
+    <div class="del" id="del">
+      <img src="../tyj/images/shanchu.png" alt="">
+      删除
+    </div>
+  </div>
+
+  <div class="footer">
+    <div onclick="myFunc('')" style="color: #c1c1c1;">
+      <img src="../tyj/images/zhuye.png" alt="">
+      <p>主页</p>
+    </div>
+    <div onclick="myFunc('')" style="color: #c1c1c1;">
+      <img src="../tyj/images/fenlei.png" alt="">
+      <p>分类</p>
+    </div>
+    <div style="color: #ff9326;">
+      <img src="../tyj/images/gouwuche.png" alt="">
+      <p>购物车</p>
+    </div>
+    <div onclick="myFunc('')" style="color: #c1c1c1;">
+      <img src="../tyj/images/wode.png" alt="">
+      <p>我的</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../tyj/js/ShoppingCart.js"></script>
+</body>
+
+</html>

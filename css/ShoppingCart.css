@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  font-family: '微软雅黑';
+  background: #f9f9f9;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #c1c1c1;
+}
+
+img {
+  border: none;
+}
+
+button, input, select {
+  border: 0;
+  outline: 0;
+}
+
+.header {
+  height: 80px;
+  line-height: 80px;
+  background: #fff;
+}
+
+.header div {
+  font-size: 21px;
+  text-align: center;
+}
+
+.header button {
+  font-size: 13px;
+  color: #999;
+  position: absolute;
+  top: 53px;
+  right: 5.4%;
+  background: none;
+}
+
+article {
+  background: #f9f9f9;
+  margin-bottom: 112px;
+}
+
+article .cen {
+  width: 95%;
+  margin: 0 auto;
+}
+
+article .zongji {
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  color: #999;
+}
+
+article .shopping {
+  height: 120px;
+  background: #fff;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+#user+label {
+  width: 14px;
+  height: 14px;
+  margin: 0px 2%;
+  background: url(../images/weixuanzhong.png) no-repeat;
+}
+
+#user:checked+label {
+  background: url(../images/xuanzhong.png) no-repeat;
+}
+
+article img {
+  width: 80px;
+}
+
+article .cenR p {
+  width: 224px;
+  font-size: 13px;
+}
+
+article .cenR select {
+  color: #bfbfbf;
+  background: #f9f9f9;
+  margin: 10px 0 15px 0;
+}
+
+article .cenRb em {
+  font-size: 13px;
+  color: #ff3333;
+  font-weight: bold;
+}
+
+article .cenRbr {
+  position: absolute;
+  right: 10%;
+  display: flex;
+  margin-top: -18px;
+}
+
+article .cenRbr input, article .cenRbr strong {
+  width: 30px;
+  height: 17px;
+  line-height: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  border: #999 solid 1px;
+}
+
+article .cenRbr .min {
+  border-radius: 5px 0 0 5px;
+  border-right: 0;
+}
+
+article .cenRbr strong {
+  line-height: 16px;
+}
+
+article .cenRbr .add {
+  border-radius: 0 5px 5px 0;
+  border-left: 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  width: 100%;
+}
+
+footer a {
+  display: block;
+}
+
+footer .xuanze {
+  height: 50px;
+  border-bottom: 6px #f9f9f9 solid;
+  display: flex;
+  align-items: center;
+  color: #b4b4b4;
+}
+
+#check+label {
+  width: 14px;
+  height: 14px;
+  margin: 0px 1% 0 4.4%;
+  background: url(../images/weixuanzhong.png) no-repeat;
+}
+
+#check:checked+label {
+  background: url(../images/xuanzhong.png) no-repeat;
+}
+
+footer .xuanze .jisuan {
+  position: absolute;
+  right: 33%;
+  color: #666;
+}
+
+footer .xuanze .jisuan span {
+  color: #f33;
+  padding-left: 5px;
+}
+
+footer .xuanze button {
+  width: 21.3%;
+  max-width: 80px;
+  height: 30px;
+  color: #fff;
+  background: #ff9326;
+  border-radius: 5px;
+  position: absolute;
+  right: 8%;
+}
+
+footer .xuanze .yiru, footer .xuanze .del {
+  position: absolute;
+  display: none;
+  cursor: default
+}
+
+footer .xuanze .yiru {
+  right: 27%;
+}
+
+footer .xuanze .del {
+  right: 8%;
+}
+
+footer .xuanze .yiru img, .del img {
+  height: 16px;
+  margin-bottom: -2px;
+}
+
+footer .footer {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+footer .footer div {
+  width: 25%;
+  text-align: center;
+  color: #ff9326;
+}
+
+footer .footer img {
+  width: 22px;
+  margin-top: 5px;
+}
+
+footer .footer p {
+  margin-bottom: 3px;
+}

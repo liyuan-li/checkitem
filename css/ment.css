@@ -51,11 +51,35 @@ header button {
   background: none;
 }
 
+#contact {
+  width: 60px;
+  height: 29px;
+  background: #f1f1f1;
+  position: absolute;
+  right: 3%;
+  top: 10%;
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  line-height: 29px;
+}
+
+#contact::after {
+  content: "";
+  border-width: 14px;
+  border-style: solid;
+  border-color: transparent transparent #f1f1f1 transparent;
+  position: absolute;
+  top: -71%;
+  left: 45%;
+}
+
 .article {
+  width: 94.5%;
   height: 389px;
   background: #fff;
-  margin: 5px 10px 0 10px;
   border-radius: 10px;
+  margin: 5px auto;
 }
 
 article .artTop {
@@ -78,7 +102,7 @@ article .artTop img {
 }
 
 article .artTop div img {
-  left: 19px;
+  left: 4%;
   width: 9px;
   height: 12px;
 }
@@ -158,15 +182,16 @@ footer {
 }
 
 footer .zhifu {
-  margin: 5px 10px 0 10px;
   border-radius: 10px;
   height: 120px;
   background: #fff;
+  width: 94.5%;
+  margin: 8px auto;
 }
 
 footer .zhifu div:nth-child(1) {
   font-weight: bolder;
-  padding: 15px 0 18px 10px;
+  padding: 10px 0 13px 10px;
 }
 
 footer .zhifu div:nth-child(2), footer .zhifu div:nth-child(3) {

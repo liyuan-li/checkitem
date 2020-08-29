@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  font-family: '微软雅黑';
+  background: #f9f9f9;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #c1c1c1;
+}
+
+img {
+  border: none;
+}
+
+button, input, select {
+  border: 0;
+  outline: 0;
+}
+
+header {
+  height: 80px;
+  line-height: 80px;
+  background: #fff;
+  text-align: center;
+}
+
+header img {
+  height: 14px;
+}
+
+header div {
+  width: 80%;
+  font-size: 21px;
+  display: inline-block;
+}
+
+article .artTop {
+  width: 94.5%;
+  height: 70px;
+  margin: 5px auto;
+  background: #fd6e6e;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.article {
+  height: 159.5px;
+  background: #fff;
+  width: 94.5%;
+  margin: 5px auto;
+  border-radius: 10px;
+}
+
+article .artTop p {
+  font-weight: bolder;
+  padding: 17px 0 0 11%;
+}
+
+article .artTop div img {
+  position: absolute;
+  top: 113px;
+  left: 5%;
+  width: 17px;
+}
+
+article .artTop div span {
+  margin-left: 11%;
+  font-size: 12px;
+}
+
+article .cenOne, article .cenTwo {
+  width: 94.5%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+article .cenOne span img {
+  padding: 2px;
+}
+
+article .cenTwo {
+  background: #e9e9e9;
+  height: 1px;
+}
+
+article button {
+  width: 60px;
+  height: 20px;
+  color: #ffa143;
+  background: #fff;
+  margin-left: 4%;
+  border: 1px solid #ffa143;
+}
+
+article #chexiao {
+  color: #999;
+  border: 1px solid #999;
+}
+
+article .shopping {
+  display: flex;
+  align-items: center;
+  height: 159.5px;
+  background: #fff;
+  width: 94.5%;
+  margin: 0 auto;
+  border-radius: 10px 10px 0 0;
+}
+
+article .shopping img {
+  width: 80px;
+}
+
+article .shopping .cenR p {
+  width: 224px;
+  font-size: 16px;
+}
+
+article .shopping .cenR select {
+  color: #bfbfbf;
+  margin: 10px 0 15px 0;
+}
+
+article .cenOne {
+  width: 94.5%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+article .cenOne span:nth-child(2) {
+  color: #999;
+  margin-left: 11px;
+}
+
+article .cenThr {
+  width: 94.5%;
+  margin: 0 auto;
+  border-radius: 0 0 10px 10px;
+  padding-bottom: 10px;
+  background: #fff;
+}
+
+article .cenThr span {
+  margin-left: 5%;
+}
+
+article .cenThr span:nth-child(2) {
+  color: #999;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+footer button {
+  width: 150px;
+  height: 40px;
+  margin-top: 20px;
+  background: #fff;
+  box-shadow: 0px 0px 1px 0px black;
+}
+
+footer button:nth-child(1) {
+  margin-right: 25px;
+}

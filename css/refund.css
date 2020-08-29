@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  font-family: '微软雅黑';
+  background: #f9f9f9;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #c1c1c1;
+}
+
+img {
+  border: none;
+}
+
+button, input, select {
+  border: 0;
+  outline: 0;
+}
+
+header {
+  height: 80px;
+  line-height: 80px;
+  background: #fff;
+  text-align: center;
+}
+
+header img {
+  height: 14px;
+}
+
+header div {
+  width: 80%;
+  font-size: 21px;
+  display: inline-block;
+}
+
+header button {
+  font-size: 13px;
+  color: #999;
+  font-weight: bolder;
+  background: none;
+}
+
+#contact {
+  width: 60px;
+  height: 29px;
+  background: #f1f1f1;
+  position: absolute;
+  right: 3%;
+  top: 10%;
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  line-height: 29px;
+}
+
+#contact::after {
+  content: "";
+  border-width: 14px;
+  border-style: solid;
+  border-color: transparent transparent #f1f1f1 transparent;
+  position: absolute;
+  top: -71%;
+  left: 45%;
+}
+
+.article, .articleT {
+  width: 94.5%;
+  background: #fff;
+  border-radius: 10px;
+  margin: 5px auto;
+}
+
+article .shopping {
+  height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+article .shopping img {
+  width: 80px;
+}
+
+article .shopping .cenR p {
+  width: 224px;
+  font-size: 16px;
+}
+
+article .shopping .cenR select {
+  color: #bfbfbf;
+  margin: 10px 0 15px 0;
+}
+
+article .artTwo {
+  padding: 10px 10px;
+}
+
+article .artTwo:nth-child(1) span:nth-child(2) {
+  color: #999;
+  position: absolute;
+  right: 9%;
+}
+
+article .artTwo:nth-child(2) span:nth-child(2) {
+  color: #ff9a34;
+  position: absolute;
+  right: 6%;
+}
+
+article .artTwo img {
+  width: 5px;
+  position: absolute;
+  right: 6%;
+  margin-top: 5px;
+}
+
+footer {
+  width: 100%;
+}
+
+footer .upload {
+  border-radius: 10px;
+  height: 120px;
+  background: #fff;
+  width: 94.5%;
+  margin: 8px auto;
+}
+
+footer .upload div {
+  font-weight: bolder;
+  padding: 10px 0 13px 10px;
+}
+
+footer .upload img {
+  width: 60px;
+  margin-left: 3%;
+}
+
+footer button {
+  width: 94.5%;
+  height: 50px;
+  color: #fff;
+  background: #ff9326;
+  border-radius: 5px;
+  margin-left: 3%;
+}

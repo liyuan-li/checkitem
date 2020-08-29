@@ -5,13 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>客服</title>
-  <link rel="stylesheet" href="./css/kefu.css" />
-
+  <link rel="stylesheet" href="../tyj/css/kefu.css" />
+  <!-- 用户和客服没名字  发送不能用  跳转还没写 -->
 </head>
 
 <body>
   <header>
-    <span onclick="myFunc('')"><img src="./images/fanhui.png" alt=""></span>
+    <span onclick="myFunc('')"><img src="../tyj/images/fanhui.png" alt=""></span>
     <div>客服</div>
   </header>
 
@@ -29,25 +29,23 @@
 
     <footer>
       <div class="footer">
-        <img src="./images/yuyin.png" alt="">
+        <img src="../tyj/images/yuyin.png" alt="">
         <input id="text" type="text" v-model.trim="inputValue" @keyup.enter='chat' placeholder="说点什么吧...">
         <button id="btn">+</button>
         <button id="bt" style="display: none;">发送</button>
       </div>
       <div id="footerT" class="footerTt">
-        <img src="./images/xiangji.png" alt="">
-        <img src="./images/pic.png" alt="">
-        <img src="./images/shipin.png" alt="">
+        <img src="../tyj/images/xiangji.png" alt="">
+        <img src="../tyj/images/pic.png" alt="">
+        <img src="../tyj/images/shipin.png" alt="">
       </div>
     </footer>
   </div>
 
+  <script src="../tyj/js/customerservice.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
   <script>
-    //用户和客服没名字  跳转还没写
-
-
     //引用图灵聊天机器人
     let app = new Vue({
       el: '#container',
@@ -55,7 +53,7 @@
         //输入的内容,事先约定好的
         inputValue: '',
         //聊天的数组内容
-        messageList: []
+        messageList: [],
       },
       methods: {
         //点击回车时候发送信息
@@ -63,7 +61,7 @@
           this.messageList.push({
             message: this.inputValue,
             //这个是判断当前是否是自己输入的内容,自己的是true,机器人的是false
-            myself: true
+            myself: true,
           })
           // console.log(1);
           // console.log(message)
@@ -74,17 +72,17 @@
             type: 'post',
             data: {
               key: 'e5e78db64c3744fda06533e6729737da',
-              info: this.inputValue
+              info: this.inputValue,
             },
             success: (data) => {
               // console.log(data);
               this.messageList.push({
                 message: data.text,
-                myself: false
+                myself: false,
               })
-            }
+            },
           })
-        }
+        },
       },
     })
 
@@ -93,13 +91,13 @@
     var footerT = document.getElementById('footerT')
 
     btn.onfocus = function () {
-      footerT.classList.add("footerT");
-      footerT.classList.remove("footerTt");
+      footerT.classList.add('footerT')
+      footerT.classList.remove('footerTt')
       btn.innerHTML = '×'
     }
     btn.onblur = function () {
-      footerT.classList.remove("footerT");
-      footerT.classList.add("footerTt");
+      footerT.classList.remove('footerT')
+      footerT.classList.add('footerTt')
       btn.innerHTML = '+'
     }
 
@@ -109,18 +107,18 @@
 
     input.onfocus = function () {
       input.style.width = 200 + 'px'
-      btn.style.display = 'none';
-      bt.style.display = 'block';
+      btn.style.display = 'none'
+      bt.style.display = 'block'
       btn.innerHTML = '发送'
-    };
+    }
     input.onblur = function () {
       input.style.width = 255 + 'px'
-      btn.style.display = 'block';
-      bt.style.display = 'none';
+      btn.style.display = 'block'
+      bt.style.display = 'none'
       btn.innerHTML = '+'
-    };
+    }
 
-    //跳转
+    //跳转封装
     function myFunc(http) {
       window.location.href = http
     }
